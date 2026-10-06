@@ -1,0 +1,39 @@
+[
+  {
+    "case": "完整四镜16秒示例",
+    "expected": "pass",
+    "observed": "pass"
+  },
+  {
+    "case": "信封无动作从右手跳到左手",
+    "expected": "reject",
+    "observed": "reject",
+    "errors": [
+      "第2镜 状态 envelope.hand 未继承前镜，需解释变化"
+    ]
+  },
+  {
+    "case": "第2镜时间断开",
+    "expected": "reject",
+    "observed": "reject",
+    "errors": [
+      "第2镜 时间有空洞或重叠，必须从 4 开始"
+    ]
+  },
+  {
+    "case": "镜头引用不存在的人物",
+    "expected": "reject",
+    "observed": "reject",
+    "errors": [
+      "第3镜 character_ids 引用未知人物或不是数组"
+    ]
+  },
+  {
+    "case": "不在风格册中的S99",
+    "expected": "reject",
+    "observed": "reject",
+    "errors": [
+      "style_id 必须是风格册内的 S01–S37"
+    ]
+  }
+]

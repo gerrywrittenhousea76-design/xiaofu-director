@@ -1,0 +1,4 @@
+interface:
+  display_name: "One Shot · 电影分镜"
+  short_description: "输入故事、选择电影视觉风格，生成有因果与连续性的分镜图和视频提示词"
+  default_prompt: "使用 $one-shot-storyboard，把我的故事转换为可选择风格的电影分镜图。"
