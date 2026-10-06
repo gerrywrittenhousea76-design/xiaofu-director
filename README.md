@@ -1,4 +1,4 @@
-# One Shot · 电影分镜
+# 小夫导演 · Xiaofu Director
 
 输入故事情节，选择一种视觉风格，生成电影分镜图和每镜可独立复制的生图、视频提示词。
 
@@ -8,10 +8,10 @@
 
 ## 使用方式
 
-在支持 Skills 和图像生成工具的环境中安装本仓库。使用 Codex 时，将整个仓库文件夹放进个人 Skills 目录，文件夹名称设为 `one-shot-storyboard`，保留里面的图片与 references。
+在支持 Skills 和图像生成工具的环境中安装本仓库。使用 Codex 时，将整个仓库文件夹放进个人 Skills 目录，文件夹名称设为 `xiaofu-director`，保留里面的图片与 references。
 
 ```text
-使用 $one-shot-storyboard。
+使用 $xiaofu-director。
 故事：女子准备把未寄出的信扔掉，听见身后有人叫她，最后把信交给来人。
 风格：S02 青蓝青春。
 16秒，4格，每格16:9。生成分镜总览和每镜独立的生图、视频提示词。
@@ -83,7 +83,7 @@
 
 ## 使用许可
 
-沿用作者原 one-shot 项目的非商业使用政策。个人非商业学习、测试和创作可按许可使用；商用需联系作者取得书面授权。完整条款见 [LICENSE.md](LICENSE.md)，申请可通过 [商用授权 Issue](https://github.com/gerrywrittenhousea76-design/one-shot-storyboard/issues/new?template=commercial-license.yml)。本项目是公开分享的受限许可项目，不称为开放源代码项目。
+沿用作者原 one-shot 项目的非商业使用政策。个人非商业学习、测试和创作可按许可使用；商用需联系作者取得书面授权。完整条款见 [LICENSE.md](LICENSE.md)，申请可通过 [商用授权 Issue](https://github.com/gerrywrittenhousea76-design/xiaofu-director/issues/new?template=commercial-license.yml)。本项目是公开分享的受限许可项目，不称为开放源代码项目。
 
 ## 维护工具
 

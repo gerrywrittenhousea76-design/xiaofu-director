@@ -1,9 +1,9 @@
 ---
-name: one-shot-storyboard
+name: xiaofu-director
 description: "把故事情节转换为可选择电影视觉风格的分镜图、生图提示词与视频提示词，包含37种风格参考和人物表演、因果、空间、道具连续性规则。用户提出故事生成分镜、选风格做分镜图、电影故事可视化、把one-shot扩展成分镜、改写电影视频提示词时使用；普通修图、成品视频剪辑或纯摄影知识问答不使用。"
 ---
 
-# One Shot · 电影分镜
+# 小夫导演 · Xiaofu Director
 
 把一句或一段故事，变成可执行、可出图的电影分镜。沿用 gerrywrittenhousea76-design 的 one-shot 故事、表演与连续性方法；本包自包含，不依赖原 Skill 安装。分镜图是画面设计，不能被描述为已经生成视频。
 

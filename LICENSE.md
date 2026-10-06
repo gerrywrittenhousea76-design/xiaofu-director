@@ -1,14 +1,14 @@
-# One Shot · 电影分镜 非商业使用与禁止再发布许可 v1.0
+# 小夫导演 · Xiaofu Director 非商业使用与禁止再发布许可 v1.0
 
-项目：One Shot · 电影分镜（`one-shot-storyboard`）
+项目：小夫导演 · Xiaofu Director（`xiaofu-director`）
 
 作者署名：gerrywrittenhousea76-design
 
 Copyright © 2026 gerrywrittenhousea76-design. 保留未明确授予的权利。
 
-官方仓库：https://github.com/gerrywrittenhousea76-design/one-shot-storyboard
+官方仓库：https://github.com/gerrywrittenhousea76-design/xiaofu-director
 
-商用授权联系：https://github.com/gerrywrittenhousea76-design/one-shot-storyboard/issues/new?template=commercial-license.yml
+商用授权联系：https://github.com/gerrywrittenhousea76-design/xiaofu-director/issues/new?template=commercial-license.yml
 
 本项目采用自定义的受限使用许可，不是 MIT、Apache 或其他开放源代码许可证。公开可见、可以下载不代表可自由商用或再分发。
 
@@ -45,9 +45,9 @@ Copyright © 2026 gerrywrittenhousea76-design. 保留未明确授予的权利。
 
 本 Skill 及依本许可保留的副本应保留以下署名与来源：
 
-> One Shot · 电影分镜 — gerrywrittenhousea76-design
+> 小夫导演 · Xiaofu Director — gerrywrittenhousea76-design
 
-> https://github.com/gerrywrittenhousea76-design/one-shot-storyboard
+> https://github.com/gerrywrittenhousea76-design/xiaofu-director
 
 不要求在正常生成的提示词正文或视频画面中自动插入作者广告、字幕或水印；另行取得的商业许可可约定具体署名方式。
 
