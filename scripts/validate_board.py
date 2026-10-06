@@ -26,7 +26,7 @@ def validate(board):
     catalog = json.loads((ROOT / 'references/styles.json').read_text())
     styles = {s['id'] for s in catalog['styles']}
     if board.get('style_id') not in styles:
-        fail('style_id 必须是风格册内的 S01–S37')
+        fail('style_id 必须是当前风格目录里的编号')
     duration = board.get('duration_seconds')
     if not number(duration) or duration <= 0:
         fail('duration_seconds 必须为正数')

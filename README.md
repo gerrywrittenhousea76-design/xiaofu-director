@@ -1,96 +1,85 @@
 # 小夫导演 · Xiaofu Director
 
-输入故事情节，选择一种视觉风格，生成电影分镜图和每镜可独立复制的生图、视频提示词。
+给一句故事，选择视觉方向，生成分镜图，并拿到逐镜独立的生图和视频提示词。
 
-**37种风格，37张独立生成的参考图。** 下表按 **01–37** 排序；用 **S01–S37** 指定风格，点击图片查看完整原图。
+**47种视觉方向，47张实际参考图。** 本版重写全部风格卡与镜头指南，新增S38–S47十种情景剧方向。S01–S37图片保留，说明以实际画面重新编写。
 
-作者：[gerrywrittenhousea76-design](https://github.com/gerrywrittenhousea76-design)。由原 [one-shot](https://github.com/gerrywrittenhousea76-design/one-shot) 扩展，原项目保留。
+## 使用教程
 
-## 使用方式
+下载完整仓库，把文件夹命名为 xiaofu-director，放到支持 Skills 的环境中。保留图片、references 与 scripts。运行环境需要提供图像工具。安装与修改步骤见 [完整使用教程](使用教程.md)。
 
-在支持 Skills 和图像生成工具的环境中安装本仓库。使用 Codex 时，将整个仓库文件夹放进个人 Skills 目录，文件夹名称设为 `xiaofu-director`，保留里面的图片与 references。
-
-```text
+~~~text
 使用 $xiaofu-director。
-故事：女子准备把未寄出的信扔掉，听见身后有人叫她，最后把信交给来人。
-风格：S02 青蓝青春。
-16秒，4格，每格16:9。生成分镜总览和每镜独立的生图、视频提示词。
-```
+故事：室友藏起最后一个饺子，听见门锁响，以为要被发现；来人放下一盒新买的饺子，她把藏着的饺子默默放回盘里。
+风格：S38 家庭喜剧。
+20秒，4格，每格16:9。
+生成分镜图，以及每镜独立的生图提示词和视频提示词。
+~~~
 
-尚未选风格时，可以说“根据我的故事推荐3种风格，我选完再生成”。也支持只要提示词、逐格独立生图，以及一镜到底的连续关键帧。
+没有风格方向，可以先要求推荐3种并展示参考图。已有风格和故事时可直接生成。一镜到底会按同一连续镜头的关键帧来设计。
 
-## 37种风格参考表
+## 看图选择
 
-这些图片共用“未寄出的信”这个展示母题，便于比较色彩、光影、构图与质感。实际创作使用你自己的故事和人物，风格图中的人物、信与服装不会自动成为剧情设定。图片均为原创AI参考，不是电影截图，也不是跨图身份一致性测试。
+按S01–S47调用，点击图片打开原图。也可以打开 [离线风格选择册](风格选择册.html) 按分类和用途筛选、填写故事并复制指令。S08蓝色记忆与S26霓虹都市保留编号和名称。其余部分名称更新，以当前表为准。
 
-| 序号 | 风格编号与名称 | 视觉特点 | 参考图（点击看原图） |
-|:---:|---|---|---|
-| 01 | **S01 · 武侠江湖**<br>动作与奇幻 | 青黑、灰白、少量暖金<br>侧逆光、薄雾、粗细适中的胶片颗粒 | <a href="assets/style-references/01-wuxia.png"><img src="assets/style-references/01-wuxia.png" width="280" alt="S01 武侠江湖参考图"></a> |
-| 02 | **S02 · 青蓝青春**<br>青春与日常 | 冷青绿、淡蓝、褪色米白<br>自然侧逆光、轻微柔焦、细颗粒 | <a href="assets/style-references/02-quiet-youth.png"><img src="assets/style-references/02-quiet-youth.png" width="280" alt="S02 青蓝青春参考图"></a> |
-| 03 | **S03 · 春日诗意**<br>青春与日常 | 淡粉、浅紫、米白、嫩绿<br>漫射日光、浅柔光、自然肤色 | <a href="assets/style-references/03-spring-poetry.png"><img src="assets/style-references/03-spring-poetry.png" width="280" alt="S03 春日诗意参考图"></a> |
-| 04 | **S04 · 都市梦境**<br>城市与复古 | 青绿、灰紫、少量暖橙<br>青色环境光与暖实景灯混合、柔焦颗粒 | <a href="assets/style-references/04-urban-dream.png"><img src="assets/style-references/04-urban-dream.png" width="280" alt="S04 都市梦境参考图"></a> |
-| 05 | **S05 · 田园浪漫**<br>田园与自然 | 草绿、乳白、暖金<br>柔暖自然光、轻薄胶片质感 | <a href="assets/style-references/05-pastoral-romance.png"><img src="assets/style-references/05-pastoral-romance.png" width="280" alt="S05 田园浪漫参考图"></a> |
-| 06 | **S06 · 几何科幻**<br>动作与奇幻 | 冷白、银灰、浅蓝<br>均匀冷光、洁净金属、锐利空间层次 | <a href="assets/style-references/06-geometric-scifi.png"><img src="assets/style-references/06-geometric-scifi.png" width="280" alt="S06 几何科幻参考图"></a> |
-| 07 | **S07 · 海岸恋曲**<br>田园与自然 | 海蓝、灰青、肤色暖光<br>海风、自然侧光、低饱和柔焦 | <a href="assets/style-references/07-coastal-romance.png"><img src="assets/style-references/07-coastal-romance.png" width="280" alt="S07 海岸恋曲参考图"></a> |
-| 08 | **S08 · 蓝色记忆**<br>青春与日常 | 浅蓝、灰蓝、雪白、点状暖黄<br>冷天光与远处暖灯、轻微颗粒 | <a href="assets/style-references/08-blue-memory.png"><img src="assets/style-references/08-blue-memory.png" width="280" alt="S08 蓝色记忆参考图"></a> |
-| 09 | **S09 · 河畔纪实**<br>城市与复古 | 浊绿、灰蓝、昏黄<br>单一实景灯、潮湿反射、粗粝颗粒 | <a href="assets/style-references/09-riverside-doc.png"><img src="assets/style-references/09-riverside-doc.png" width="280" alt="S09 河畔纪实参考图"></a> |
-| 10 | **S10 · 木屋慢生活**<br>青春与日常 | 原木、米白、抹茶绿<br>柔侧光、真实木纹、低反差 | <a href="assets/style-references/10-wooden-life.png"><img src="assets/style-references/10-wooden-life.png" width="280" alt="S10 木屋慢生活参考图"></a> |
-| 11 | **S11 · 蓝色超现实**<br>实验与梦幻 | 深蓝、透明浅蓝、橙红<br>油画笔触、蓝色空气、亮色小物 | <a href="assets/style-references/11-blue-surreal.png"><img src="assets/style-references/11-blue-surreal.png" width="280" alt="S11 蓝色超现实参考图"></a> |
-| 12 | **S12 · 双重曝光**<br>实验与梦幻 | 深蓝、鲜绿、米白、淡粉<br>双重曝光边缘、清楚轮廓、绘画纹理 | <a href="assets/style-references/12-double-exposure.png"><img src="assets/style-references/12-double-exposure.png" width="280" alt="S12 双重曝光参考图"></a> |
-| 13 | **S13 · 海边实拍**<br>田园与自然 | 绿松石、纯白、自然绿<br>明亮真实日光、清楚水纹、少量颗粒 | <a href="assets/style-references/13-beach-document.png"><img src="assets/style-references/13-beach-document.png" width="280" alt="S13 海边实拍参考图"></a> |
-| 14 | **S14 · 竹林写意**<br>动作与奇幻 | 竹绿、雾白、淡灰<br>自然散射光、轻雾、衣料纹理 | <a href="assets/style-references/14-bamboo-mist.png"><img src="assets/style-references/14-bamboo-mist.png" width="280" alt="S14 竹林写意参考图"></a> |
-| 15 | **S15 · 金鱼夏日**<br>青春与日常 | 清水蓝、金鱼橙、柔白<br>透水光斑、真实水纹、细颗粒 | <a href="assets/style-references/15-goldfish-summer.png"><img src="assets/style-references/15-goldfish-summer.png" width="280" alt="S15 金鱼夏日参考图"></a> |
-| 16 | **S16 · 森林庆典**<br>田园与自然 | 叶绿、米白、暖金<br>金色散射光、复古织物、柔和光晕 | <a href="assets/style-references/16-forest-celebration.png"><img src="assets/style-references/16-forest-celebration.png" width="280" alt="S16 森林庆典参考图"></a> |
-| 17 | **S17 · 地中海夏日**<br>田园与自然 | 橄榄绿、杏黄、淡蓝<br>强日光与树荫、真实肤色、细颗粒 | <a href="assets/style-references/17-mediterranean-summer.png"><img src="assets/style-references/17-mediterranean-summer.png" width="280" alt="S17 地中海夏日参考图"></a> |
-| 18 | **S18 · 古典花园**<br>田园与自然 | 暖棕、草绿、乳白<br>晨昏侧光、薄纱与石材、低饱和 | <a href="assets/style-references/18-classical-garden.png"><img src="assets/style-references/18-classical-garden.png" width="280" alt="S18 古典花园参考图"></a> |
-| 19 | **S19 · 邮轮古典**<br>城市与复古 | 海蓝、乳白、木棕、暖金<br>柔海光、木材与布料、暖冷平衡 | <a href="assets/style-references/19-ocean-liner.png"><img src="assets/style-references/19-ocean-liner.png" width="280" alt="S19 邮轮古典参考图"></a> |
-| 20 | **S20 · 巨物美学**<br>动作与奇幻 | 沙金、象牙白、深棕<br>单侧光束、尘雾、巨大明暗层次 | <a href="assets/style-references/20-monumental.png"><img src="assets/style-references/20-monumental.png" width="280" alt="S20 巨物美学参考图"></a> |
-| 21 | **S21 · 日系日常**<br>青春与日常 | 清冷蓝、米白、浅绿<br>柔天光、水光或窗光、细颗粒 | <a href="assets/style-references/21-everyday-japan.png"><img src="assets/style-references/21-everyday-japan.png" width="280" alt="S21 日系日常参考图"></a> |
-| 22 | **S22 · 生活观察**<br>青春与日常 | 浅青、木棕、暖灰<br>漫射光、真实皮肤、适度景深 | <a href="assets/style-references/22-observant-home.png"><img src="assets/style-references/22-observant-home.png" width="280" alt="S22 生活观察参考图"></a> |
-| 23 | **S23 · 童话冒险**<br>实验与梦幻 | 暖黄、浅蓝、橙红<br>温暖侧光、立体细节、复古色块 | <a href="assets/style-references/23-storybook-adventure.png"><img src="assets/style-references/23-storybook-adventure.png" width="280" alt="S23 童话冒险参考图"></a> |
-| 24 | **S24 · 都市观察**<br>城市与复古 | 灰绿、米白、局部红<br>城市窗光、低饱和、自然材质 | <a href="assets/style-references/24-taiwan-observation.png"><img src="assets/style-references/24-taiwan-observation.png" width="280" alt="S24 都市观察参考图"></a> |
-| 25 | **S25 · 青绿幻境**<br>动作与奇幻 | 青绿、雾白、银色、少量红<br>戏剧侧光、柔光晕、丝绸反光 | <a href="assets/style-references/25-green-fantasy.png"><img src="assets/style-references/25-green-fantasy.png" width="280" alt="S25 青绿幻境参考图"></a> |
-| 26 | **S26 · 霓虹都市**<br>城市与复古 | 荧光绿、冷蓝、暖黄、红<br>实景霓虹、背景拖影、粗颗粒 | <a href="assets/style-references/26-neon-city.png"><img src="assets/style-references/26-neon-city.png" width="280" alt="S26 霓虹都市参考图"></a> |
-| 27 | **S27 · 戏曲后台**<br>城市与复古 | 朱红、深黑、象牙白、暖金<br>暖戏灯、刺绣布料、浓黑层次 | <a href="assets/style-references/27-opera-backstage.png"><img src="assets/style-references/27-opera-backstage.png" width="280" alt="S27 戏曲后台参考图"></a> |
-| 28 | **S28 · 草木观察**<br>田园与自然 | 鲜绿、肤色、土棕<br>真实斑驳日光、皮肤纹理、细颗粒 | <a href="assets/style-references/28-botanical-observation.png"><img src="assets/style-references/28-botanical-observation.png" width="280" alt="S28 草木观察参考图"></a> |
-| 29 | **S29 · 乡村温润**<br>田园与自然 | 溪绿、木棕、米黄<br>柔日光、编织材质、旧木纹 | <a href="assets/style-references/29-rural-warmth.png"><img src="assets/style-references/29-rural-warmth.png" width="280" alt="S29 乡村温润参考图"></a> |
-| 30 | **S30 · 田园成长**<br>田园与自然 | 麦绿、暖白、棕红<br>柔自然光、田野质感、温暖颗粒 | <a href="assets/style-references/30-countryside-growth.png"><img src="assets/style-references/30-countryside-growth.png" width="280" alt="S30 田园成长参考图"></a> |
-| 31 | **S31 · 窗边剪影**<br>田园与自然 | 墨绿、暗棕、暖白<br>逆光保轮廓、深暗部、胶片纹理 | <a href="assets/style-references/31-window-silhouette.png"><img src="assets/style-references/31-window-silhouette.png" width="280" alt="S31 窗边剪影参考图"></a> |
-| 32 | **S32 · 山野田园**<br>田园与自然 | 草绿、蓝天、米白、暖黄<br>明亮自然光、清楚草木、轻胶片感 | <a href="assets/style-references/32-alpine-pastoral.png"><img src="assets/style-references/32-alpine-pastoral.png" width="280" alt="S32 山野田园参考图"></a> |
-| 33 | **S33 · 红衣古风**<br>动作与奇幻 | 朱红、暖金、深棕<br>暖室内柔光、丝绸反光、少量光晕 | <a href="assets/style-references/33-crimson-fantasy.png"><img src="assets/style-references/33-crimson-fantasy.png" width="280" alt="S33 红衣古风参考图"></a> |
-| 34 | **S34 · 复古舞厅**<br>城市与复古 | 暖黄、朱红、深绿<br>暖实景灯、柔光晕、衣料颗粒 | <a href="assets/style-references/34-vintage-ballroom.png"><img src="assets/style-references/34-vintage-ballroom.png" width="280" alt="S34 复古舞厅参考图"></a> |
-| 35 | **S35 · 英伦复古**<br>田园与自然 | 暖棕、玫瑰粉、橄榄绿<br>暖散射光、柔焦、复古布料 | <a href="assets/style-references/35-english-retro.png"><img src="assets/style-references/35-english-retro.png" width="280" alt="S35 英伦复古参考图"></a> |
-| 36 | **S36 · 旧城童年**<br>城市与复古 | 暖黄、木棕、暗绿<br>午后斑驳光、旧墙质感、暖颗粒 | <a href="assets/style-references/36-courtyard-memory.png"><img src="assets/style-references/36-courtyard-memory.png" width="280" alt="S36 旧城童年参考图"></a> |
-| 37 | **S37 · 单车青春**<br>青春与日常 | 叶绿、浅蓝、暖白<br>明亮日光、浅柔焦、自然暖肤色 | <a href="assets/style-references/37-bicycle-youth.png"><img src="assets/style-references/37-bicycle-youth.png" width="280" alt="S37 单车青春参考图"></a> |
+| 编号 | 风格 | 颜色与光线 | 参考图 |
+|---|---|---|---|
+| S01 | 雾山木廊 | 炭黑、雾灰、亚麻白；廊外亮天空勾出肩线，廊内不补成通亮 | [![参考图](assets/style-references/01-wuxia.png) ](assets/style-references/01-wuxia.png) |
+| S02 | 青绿回廊 | 稻绿、石灰、米白；开敞廊侧的日光均匀落在脸上 | [![参考图](assets/style-references/02-quiet-youth.png) ](assets/style-references/02-quiet-youth.png) |
+| S03 | 樱影春日 | 花粉、浅木褐、暖白；明亮散射光透过花枝，阴影柔软 | [![参考图](assets/style-references/03-spring-poetry.png) ](assets/style-references/03-spring-poetry.png) |
+| S04 | 湿夜孤廊 | 墨绿、暗褐、微量琥珀；低位反光与几盏远处小灯分开照明 | [![参考图](assets/style-references/04-urban-dream.png) ](assets/style-references/04-urban-dream.png) |
+| S05 | 石廊日光 | 砂金、奶油白、叶绿；斜射午后光在石柱与地面形成大块亮面 | [![参考图](assets/style-references/05-pastoral-romance.png) ](assets/style-references/05-pastoral-romance.png) |
+| S06 | 银白舱室 | 冷白、银灰、微蓝；重复灯带提供均匀冷光，脸部保留明暗 | [![参考图](assets/style-references/06-geometric-scifi.png) ](assets/style-references/06-geometric-scifi.png) |
+| S07 | 海岸木屋 | 深木褐、海蓝、奶白；海面反射补亮人物，屋檐下保留阴影 | [![参考图](assets/style-references/07-coastal-romance.png) ](assets/style-references/07-coastal-romance.png) |
+| S08 | 蓝色记忆 | 灰蓝、浅蓝、少量暖黄；窗外冷光与室内小灯分别照亮不同区域 | [![参考图](assets/style-references/08-blue-memory.png) ](assets/style-references/08-blue-memory.png) |
+| S09 | 河岸旧楼 | 灰褐、烟蓝、低饱和米白；阴天水面反光，室内亮度不过分提升 | [![参考图](assets/style-references/09-riverside-doc.png) ](assets/style-references/09-riverside-doc.png) |
+| S10 | 木屋午后 | 蜂蜜褐、暖白、浅绿；窗外树影切分暖日光 | [![参考图](assets/style-references/10-wooden-life.png) ](assets/style-references/10-wooden-life.png) |
+| S11 | 蓝幕浮鱼 | 群青、钴蓝、少量橙；大面积蓝色漫反射让橙色小物成为亮点 | [![参考图](assets/style-references/11-blue-surreal.png) ](assets/style-references/11-blue-surreal.png) |
+| S12 | 双层暮色 | 暮紫、烟灰、晚霞橙；主体轮廓由夕照勾边，叠层保留不同亮度 | [![参考图](assets/style-references/12-double-exposure.png) ](assets/style-references/12-double-exposure.png) |
+| S13 | 白阶碧海 | 瓷白、碧蓝、浅砂金；无遮蔽晴光，人物阴影仍能辨认 | [![参考图](assets/style-references/13-beach-document.png) ](assets/style-references/13-beach-document.png) |
+| S14 | 竹影长廊 | 竹绿、深褐、灰白；竹叶遮挡阳光，廊侧形成细碎亮斑 | [![参考图](assets/style-references/14-bamboo-mist.png) ](assets/style-references/14-bamboo-mist.png) |
+| S15 | 池水夏光 | 浅金、池蓝、叶绿；水面反射与树叶影子交替落在衣服上 | [![参考图](assets/style-references/15-goldfish-summer.png) ](assets/style-references/15-goldfish-summer.png) |
+| S16 | 藤架午后 | 草绿、浅金、象牙白；葡萄藤筛下斑驳光，人物眼睛不落在死黑影里 | [![参考图](assets/style-references/16-forest-celebration.png) ](assets/style-references/16-forest-celebration.png) |
+| S17 | 暖石拱廊 | 土黄、暖褐、灰绿；低角度暖日光与拱门阴影分区 | [![参考图](assets/style-references/17-mediterranean-summer.png) ](assets/style-references/17-mediterranean-summer.png) |
+| S18 | 花园回廊 | 嫩绿、奶油白、砂褐；柔和晴光，近处人像亮度低于背景花园一点 | [![参考图](assets/style-references/18-classical-garden.png) ](assets/style-references/18-classical-garden.png) |
+| S19 | 海上长廊 | 栗褐、奶白、海蓝；窗侧自然光与内部暖灯混合 | [![参考图](assets/style-references/19-ocean-liner.png) ](assets/style-references/19-ocean-liner.png) |
+| S20 | 巨厅光束 | 深金、炭褐、乳白；高处开口投下一束明亮光，周围仍偏暗 | [![参考图](assets/style-references/20-monumental.png) ](assets/style-references/20-monumental.png) |
+| S21 | 水族长廊 | 水蓝、青灰、暖白；水箱蓝光与少量壁灯照出不同色温 | [![参考图](assets/style-references/21-everyday-japan.png) ](assets/style-references/21-everyday-japan.png) |
+| S22 | 老屋窗光 | 米白、淡灰、旧木褐；窗边自然光柔和进入室内 | [![参考图](assets/style-references/22-observant-home.png) ](assets/style-references/22-observant-home.png) |
+| S23 | 彩窗奇旅 | 金黄、浅蓝、少量砖红；圆灯与彩窗共同照亮地面，饱和度受控 | [![参考图](assets/style-references/23-storybook-adventure.png) ](assets/style-references/23-storybook-adventure.png) |
+| S24 | 都市观察 | 灰绿、米白、烟褐；侧窗透入阴天日光，深处照明自然衰减 | [![参考图](assets/style-references/24-taiwan-observation.png) ](assets/style-references/24-taiwan-observation.png) |
+| S25 | 苔院青雾 | 深青绿、石灰、一点暗红；雾天柔光穿过叶隙，室内暗面不染荧光绿 | [![参考图](assets/style-references/25-green-fantasy.png) ](assets/style-references/25-green-fantasy.png) |
+| S26 | 霓虹都市 | 墨绿、琥珀、少量冷蓝；绿色顶灯与橙色窗灯形成局部色差 | [![参考图](assets/style-references/26-neon-city.png) ](assets/style-references/26-neon-city.png) |
+| S27 | 红帘后台 | 酒红、深木褐、暖金；灯镜附近局部明亮，帘后保持暗 | [![参考图](assets/style-references/27-opera-backstage.png) ](assets/style-references/27-opera-backstage.png) |
+| S28 | 草木庭院 | 叶绿、灰石、奶白；叶隙阳光打亮局部，整体对比温和 | [![参考图](assets/style-references/28-botanical-observation.png) ](assets/style-references/28-botanical-observation.png) |
+| S29 | 河村木舍 | 旧木褐、溪绿、米白；开敞溪侧的自然光照亮廊边 | [![参考图](assets/style-references/29-rural-warmth.png) ](assets/style-references/29-rural-warmth.png) |
+| S30 | 田垄晚风 | 麦金、木褐、暖白；较低的太阳在地面留下长影 | [![参考图](assets/style-references/30-countryside-growth.png) ](assets/style-references/30-countryside-growth.png) |
+| S31 | 窗边剪影 | 深木褐、叶绿、浅米白；明亮窗外与暗室形成反差，脸部有少量反射补光 | [![参考图](assets/style-references/31-window-silhouette.png) ](assets/style-references/31-window-silhouette.png) |
+| S32 | 高山晴廊 | 晴蓝、草绿、浅木褐；高地晴天的清透自然光 | [![参考图](assets/style-references/32-alpine-pastoral.png) ](assets/style-references/32-alpine-pastoral.png) |
+| S33 | 朱衣灯廊 | 朱红、深褐、暖金；小灯从侧后方照亮红衣褶皱 | [![参考图](assets/style-references/33-crimson-fantasy.png) ](assets/style-references/33-crimson-fantasy.png) |
+| S34 | 暗红舞厅 | 暗红、橄榄绿、钨灯黄；墙面小灯和门边红光分开照明 | [![参考图](assets/style-references/34-vintage-ballroom.png) ](assets/style-references/34-vintage-ballroom.png) |
+| S35 | 蔷薇庭院 | 浅粉、橄榄绿、砂褐；花架下散射暖光，面部对比偏柔 | [![参考图](assets/style-references/35-english-retro.png) ](assets/style-references/35-english-retro.png) |
+| S36 | 巷院旧光 | 黄褐、灰白、暗绿；树影落在旧墙和地面，廊内自然变暗 | [![参考图](assets/style-references/36-courtyard-memory.png) ](assets/style-references/36-courtyard-memory.png) |
+| S37 | 树荫单车 | 浅绿、灰蓝、暖白；树荫下柔光与远处晴光并存 | [![参考图](assets/style-references/37-bicycle-youth.png) ](assets/style-references/37-bicycle-youth.png) |
+| S38 | 家庭喜剧 · 新增 | 奶油黄、浅蓝、珊瑚红；白天窗光与室内暖灯铺开，让表情清楚 | [![参考图](assets/style-references/38-family-comedy.png) ](assets/style-references/38-family-comedy.png) |
+| S39 | 办公室群像 · 新增 | 钢灰、雾蓝、暖米白；窗侧冷日光与办公顶灯平衡，肤色中性 | [![参考图](assets/style-references/39-office-ensemble.png) ](assets/style-references/39-office-ensemble.png) |
+| S40 | 夜班便利店 · 新增 | 薄荷青、冷白、门外深蓝；均匀店内白灯，窗外暗蓝夜色作为对比 | [![参考图](assets/style-references/40-night-convenience.png) ](assets/style-references/40-night-convenience.png) |
+| S41 | 乡镇婚宴 · 新增 | 桌布红、灯泡金、浅米白；室内暖白灯与门外日光混合 | [![参考图](assets/style-references/41-town-banquet.png) ](assets/style-references/41-town-banquet.png) |
+| S42 | 电梯悬念 · 新增 | 钢银、蓝灰、冷白；窄顶灯向下照出轻微压迫感，眼睛仍可见 | [![参考图](assets/style-references/42-elevator-tension.png) ](assets/style-references/42-elevator-tension.png) |
+| S43 | 公路旅伴 · 新增 | 沙金、天空蓝、暖白；低角度干燥日光照亮边缘，门檐下保留阴影 | [![参考图](assets/style-references/43-road-companions.png) ](assets/style-references/43-road-companions.png) |
+| S44 | 旧楼邻里 · 新增 | 浅米、旧绿、暖棕；门内暖灯与走廊冷日光分区 | [![参考图](assets/style-references/44-old-building-neighbors.png) ](assets/style-references/44-old-building-neighbors.png) |
+| S45 | 黑白对峙 · 新增 | 深黑、银灰、亮白；一侧窗光制造明暗分区，暗侧保留眼部层次 | [![参考图](assets/style-references/45-monochrome-dialogue.png) ](assets/style-references/45-monochrome-dialogue.png) |
+| S46 | 雨停重逢 · 新增 | 雾蓝、淡桃金、湿石灰；雨后低角度柔日光照亮湿路，皮肤不泛橙 | [![参考图](assets/style-references/46-after-rain-reunion.png) ](assets/style-references/46-after-rain-reunion.png) |
+| S47 | 微缩舞台 · 新增 | 陶土橙、灰蓝、木色；柔和摄影棚侧光照出模型阴影 | [![参考图](assets/style-references/47-miniature-stage.png) ](assets/style-references/47-miniature-stage.png) |
 
-每个编号对应完整风格卡：[风格索引](references/style-index.md) · [风格配方](风格参考图提示词.md) · [图片文件与校验清单](assets/image-manifest.json)。
+## 输出与复核
 
-## 实际分镜示例
+交付分镜图、镜头说明和每镜可独立复制的提示词。动作、机位、对白与声音写在视频指令中，静态图片只表示画面设计已完成。动态视频、口型和声音仍需后续工具实际生成和复看。
 
-故事：准备扔掉未寄出的信 → 停手 → 听见来人并回望 → 把信交给来人。风格 S02，4格剪辑分镜。
+单镜大图需要逐镜生成；裁切总览会标明是裁切。屏幕文字较小时，可以按交付文档里的准确台词单独排版。
 
-![S02 未寄出的信四格分镜](examples/未寄出的信/分镜图.png)
-
-[逐镜生图与视频提示词](examples/未寄出的信/分镜说明.md) · [结构化分镜文档](examples/未寄出的信/board.json)。这是一张四格总览，已经查看并修正交接动作；没有生成动态视频、口型或声音。
-
-## Skill 怎样工作
-
-先整理故事的触发、选择与结果，再确定人物、道具、场景与镜头路径；将所选风格转成具体视觉属性，最后生成分镜图并查看实际结果。风格改变视觉，不改掉用户指定的职业、人物关系或结局。
-
-[Skill 入口](SKILL.md) · [与 one-shot 的结合](结合说明.md) · [资料来源](references/provenance.md) · [验收记录](验收记录.md)。
-
-仓库中的 `风格选择册.html` 是离线选择页，下载整个仓库后在本地打开，可搜索、选择风格并复制调用指令。GitHub 的文件浏览页显示HTML源码；首页的上表可以直接浏览全部37张参考图。
+包内还提供风格查询、图册重建与镜头文档校验脚本。素材保留与新增的记录见 [素材说明](references/provenance.md)，结构化交接见 [文档格式](references/board-schema.md)。
 
 ## 使用许可
 
-沿用作者原 one-shot 项目的非商业使用政策。个人非商业学习、测试和创作可按许可使用；商用需联系作者取得书面授权。完整条款见 [LICENSE.md](LICENSE.md)，申请可通过 [商用授权 Issue](https://github.com/gerrywrittenhousea76-design/xiaofu-director/issues/new?template=commercial-license.yml)。本项目是公开分享的受限许可项目，不称为开放源代码项目。
-
-## 维护工具
-
-```sh
-python scripts/get_style.py S26
-python scripts/build_gallery.py --strict
-python scripts/validate_board.py examples/未寄出的信/board.json
-```
-
-图册维护需要 Python 与 Pillow；其他两个脚本只用 Python 标准库。正常调用 Skill 不需要手动运行维护脚本。文档结构检查不替代看图，也不证明动态视频质量。
+作者：[gerrywrittenhousea76-design](https://github.com/gerrywrittenhousea76-design)。当前为公开分享的受限许可项目，个人非商业使用按 [LICENSE.md](LICENSE.md) 进行；商用需联系作者取得书面授权。可通过 [商用授权申请](https://github.com/gerrywrittenhousea76-design/xiaofu-director/issues/new?template=commercial-license.yml) 联系。
